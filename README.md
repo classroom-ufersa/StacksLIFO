@@ -316,6 +316,183 @@ struct pilha
 
 ### Vantagens Pilha Com Lista
 
+1. **Tamanho Variável**: Ao contrário das pilhas com vetor, uma pilha com lista encadeada pode crescer ou encolher dinamicamente conforme necessário, sem a necessidade de definir um tamanho máximo antecipadamente.
+
+2. **Eficiência de Inserção e Remoção**: Inserir ou remover elementos no topo de uma pilha com lista encadeada é uma operação eficiente, pois requer apenas a atualização de ponteiros, sem realocação de memória.
+
+3. **Uso Eficiente de Memória**: A pilha com lista encadeada utiliza apenas a quantidade de memória necessária para armazenar os elementos atuais, o que a torna eficiente em termos de uso de memória quando o tamanho da pilha é variável.
+
+
 ### Desvantagens Pilha Com Lista
 
+1. **Complexidade de Acesso Aleatório**: O acesso a elementos em posições específicas da pilha (não no topo) é menos eficiente em uma lista encadeada do que em uma pilha com vetor, já que requer percorrer a lista a partir do topo.
+
+2. **Memória para Ponteiros**: Cada nó em uma lista encadeada possui um ou dois ponteiros (um para o próximo nó e outro para o nó anterior, se for uma lista duplamente encadeada), o que pode causar um pequeno gasto de memória em comparação com um vetor.
+
+3. **Complexidade de Implementação**: Implementar uma pilha com lista encadeada pode exigir um código ligeiramente mais complexo do que uma pilha com vetor devido ao gerenciamento dinâmico de memória e aos ponteiros.
+
 ### **Algumas funções da TAD pilhalist**
+
+### pilha_cria
+
+**Descrição:** Esta função cria uma nova pilha vazia alocando memória para a estrutura da pilha.
+
+**Código:**
+
+```c
+Pilha *pilha_cria()
+{
+    Pilha *novo = (Pilha *)malloc(sizeof(Pilha));
+    novo->topo = NULL;
+    return novo;
+}
+```
+
+**Exemplo de Uso:**
+
+```c
+Pilha *minhaPilha = pilha_cria();
+```
+
+### pilha_push
+
+**Descrição:** Esta função empilha (insere) um elemento no topo da pilha.
+
+**Código:**
+
+```c
+void pilha_push(Pilha *p, float v)
+{
+    Lista *novo = (Lista *)malloc(sizeof(Lista));
+    if (novo == NULL)
+    {
+        printf("[ERRO] Memória insuficiente!");
+        exit(1);
+    }
+    novo->info = v;
+    novo->prox = p->topo;
+    novo->ant = NULL;
+    if (p->topo != NULL)
+        p->topo->ant = novo;
+
+    p->topo = novo;
+}
+```
+
+**Exemplo de Uso:**
+
+```c
+pilha_push(minhaPilha, 42.5);
+```
+
+### pilha_pop
+
+**Descrição:** Esta função desempilha (remove e retorna) o elemento do topo da pilha.
+
+**Código:**
+
+```c
+float pilha_pop(Pilha *p)
+{
+    if (p->topo == NULL)
+    {
+        printf("Pilha vazia!");
+        exit(1);
+    }
+
+    float v = p->topo->info;
+    Lista *antigo = p->topo;
+    p->topo = antigo->prox;
+
+    if (p->topo != NULL)
+        p->topo->ant = NULL;
+
+    free(antigo);
+    return v;
+}
+```
+
+**Exemplo de Uso:**
+
+```c
+float elemento = pilha_pop(minhaPilha);
+```
+
+### pilha_vazia
+
+**Descrição:** Esta função verifica se a pilha está vazia, retornando 1(verdadeiro) se estiver vazia ou 0(falso) caso contrário.
+
+**Código:**
+
+```c
+int pilha_vazia(Pilha *p)
+{
+    return (p->topo == NULL);
+}
+```
+
+**Exemplo de Uso:**
+
+```c
+if (pilha_vazia(minhaPilha))
+{
+    printf("A pilha está vazia.\n");
+}
+```
+
+### pilha_libera
+
+**Descrição:** Esta função libera a memória utilizada pela pilha, incluindo todos os elementos.
+
+**Código:**
+
+```c
+void pilha_libera(Pilha *p)
+{
+    Lista *atual = p->topo;
+    while (atual != NULL)
+    {
+        Lista *proximo = atual->prox;
+        free(atual);
+        atual = proximo;
+    }
+    free(p);
+}
+```
+
+**Exemplo de Uso:**
+
+```c
+pilha_libera(minhaPilha);
+```
+
+### pilha_imprime
+
+**Descrição:** Esta função imprime os elementos da pilha, se houver elementos presentes.
+
+**Código:**
+
+```c
+void pilha_imprime(Pilha *p)
+{
+    if (p->topo == NULL)
+        printf("A pilha está vazia.\n");
+    else
+    {
+        printf("Pilha: \" ");
+        Lista *atual = p->topo;
+        while (atual != NULL)
+        {
+            printf("%.1f ", atual->info);
+            atual = atual->prox;
+        }
+        printf("\"\n");
+    }
+}
+```
+
+**Exemplo de Uso:**
+
+```c
+pilha_imprime(minhaPilha);
+```
