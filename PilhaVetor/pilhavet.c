@@ -5,9 +5,9 @@
 
 struct pilha
 {
-    float *data;  // Ponteiro para o vetor de elementos da pilha
-    int size;     // Tamanho atual da pilha
-    int capacity; // Capacidade máxima do vetor
+    float *data; 
+    int size;  
+    int capacity; 
 };
 
 Pilha *pilha_cria(void)
