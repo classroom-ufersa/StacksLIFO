@@ -9,13 +9,13 @@
   - [Estrutura](#estrutura-pilha-com-vetor)
   - [Vantagens](#vantagens-pilha-com-vetor)
   - [Desvantagens](#desvantagens-pilha-com-vetor)
-  - [Algumas Funções da TAD Lista Com Vetor](#algumas-funções-da-tad-pilhavet)
+  - [Algumas Funções da TAD Pilha Com Vetor](#algumas-funções-da-tad-pilhavet)
 - [Pilha Com Lista](#pilha-com-lista)
   - [Descrição](#descrição-pilha-com-lista)
   - [Estrutura](#estrutura-pilha-com-lista)
   - [Vantagens](#vantagens-pilha-com-lista)
   - [Desvantagens](#desvantagens-pilha-com-lista)
-  - [Algumas Funções da TAD Lista Dupla](#algumas-funções-da-tad-pilhalist)
+  - [Algumas Funções da TAD Pilha Com Lista](#algumas-funções-da-tad-pilhalist)
 
 ## Introdução
 
