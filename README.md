@@ -88,7 +88,7 @@ Agora, você pode executar o programa compilado usando o comando `./` no termina
 
   - Para implementar uma pilha com vetores em C, você utiliza um vetor (array) para armazenar os elementos da pilha. Você também precisa de um índice que aponta para o topo da pilha, ou seja, a posição do último elemento adicionado.
 
-  ![Pilha vet](https://github.com/classroom-ufersa/StacksLIFO/Img/pilhavet.png)
+  ![Pilha vet](https://github.com/classroom-ufersa/StacksLIFO/blob/main/Img/pilhavet.png)
 
 **imagem tirada do site:** [UFRJ](https://www.cos.ufrj.br/~rfarias/cos121/pilhas.html)
 ### Estrutura Pilha Com Vetor
