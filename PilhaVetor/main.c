@@ -9,21 +9,21 @@ int main()
     pilha_push(p, 20.3);
     pilha_push(p, 30.7);
 
-    printf("Elementos na pilha após a inserção:\n");
+    printf("Elementos na pilha apos a insercao:\n");
     pilha_imprime(p);
 
     // Testando pilha_pop para remover elementos da pilha
     float valor = pilha_pop(p);
     printf("Elemento removido da pilha: %.1f\n", valor);
 
-    printf("Elementos na pilha após a remoção:\n");
+    printf("Elementos na pilha apos a remocao:\n");
     pilha_imprime(p);
 
     // Testando pilha_vazia
     if (pilha_vazia(p))
-        printf("A pilha está vazia.\n");
+        printf("A pilha esta vazia.\n");
     else
-        printf("A pilha não está vazia.\n");
+        printf("A pilha nao esta vazia.\n");
 
     // Testando pilha_libera para liberar a memória alocada
     pilha_libera(p);
