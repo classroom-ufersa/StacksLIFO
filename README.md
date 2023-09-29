@@ -284,9 +284,8 @@ pilha_imprime(minhaPilha);
 - Para implementar uma pilha com lista em C, você utiliza uma lista encadeada onde cada nó contém dois campos: um campo de dados para armazenar informações e um ponteiro que aponta para o próximo nó na lista(ou dois ponteiros caso seja duplamente encadeada).
 
 ### Estrutura Pilha Com Lista
-Claro, você pode usar as estruturas `struct listad` e `struct pilha` para implementar uma pilha com lista encadeada em C. Aqui está uma descrição das estruturas e como você pode usá-las:
 
-### Estrutura `struct listad` (Nó da Lista Duplamente Encadeada):
+#### Estrutura `struct listad` (Nó da Lista Duplamente Encadeada):
 
 ```c
 struct listad
@@ -303,7 +302,7 @@ struct listad
 
 - `struct listad *ant`: Este é um ponteiro para o nó anterior na lista (o nó que precede o nó atual). Em uma pilha, você pode ou não usar o ponteiro anterior, dependendo dos requisitos da sua implementação.
 
-### Estrutura `struct pilha` (Pilha com Lista Duplamente Encadeada):
+#### Estrutura `struct pilha` (Pilha com Lista Duplamente Encadeada):
 
 ```c
 struct pilha
