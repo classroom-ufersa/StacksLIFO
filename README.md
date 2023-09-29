@@ -278,6 +278,11 @@ pilha_imprime(minhaPilha);
 
 ### Descrição Pilha Com Lista
 
+
+- Uma pilha com lista em C é uma estrutura de dados que segue o princípio "last-in, first-out" (LIFO), o que significa que o último elemento adicionado à pilha é o primeiro a ser removido.
+
+- Para implementar uma pilha com lista em C, você utiliza uma lista encadeada onde cada nó contém dois campos: um campo de dados para armazenar informações e um ponteiro que aponta para o próximo nó na lista(ou dois ponteiros caso seja duplamente encadeada).
+
 ### Estrutura Pilha Com Lista
 
 ### Vantagens Pilha Com Lista
