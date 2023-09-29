@@ -19,6 +19,9 @@
 
 ## Introdução
 
+Uma pilha é uma estrutura de dados linear que segue uma abordagem de "último a entrar, primeiro a sair" (LIFO - Last-In, First-Out). Em outras palavras, o último elemento adicionado à pilha é o primeiro a ser removido. Isso faz com que a pilha seja uma estrutura de dados muito útil em muitos contextos, especialmente quando você precisa manter o controle da ordem de elementos.
+
+A estrutura de dados de pilha pode ser visualizada como uma pilha de pratos, onde você adiciona ou remove pratos apenas no topo da pilha. Para adicionar um novo elemento, você o coloca no topo da pilha, e para remover um elemento, você retira o elemento que está no topo.
 ## Baixar, Compilar e Executar Código de Repositório via Terminal
 
 ### Pré-requisitos
@@ -74,3 +77,27 @@ Agora, você pode executar o programa compilado usando o comando `./` no termina
 - **Facilita a Depuração:** Se ocorrer um erro em uma operação da pilha, é mais fácil depurar (encontrar o erro) quando você tem uma interface clara e bem definida para a pilha. Você pode isolar o problema mais facilmente.
 
 - **Documentação:** O TAD Pilha serve como documentação clara das operações suportadas pela pilha. Isso ajuda os desenvolvedores a entender como usar a pilha corretamente.
+
+## Pilha Com Vetor
+
+### Descrição Pilha Com Vetor
+
+### Estrutura Pilha Com Vetor
+
+### Vantagens Pilha Com Vetor
+
+### Desvantagens Pilha Com Vetor
+
+### Algumas funções da TAD pilhavet
+
+## Pilha Com Lista
+
+### Descrição Pilha Com Lista
+
+### Estrutura Pilha Com Lista
+
+### Vantagens Pilha Com Lista
+
+### Desvantagens Pilha Com Lista
+
+### Algumas funções da TAD pilhalist
